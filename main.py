@@ -1,6 +1,12 @@
+import os
+from dotenv import load_dotenv
 import discord
 
-intents = discord.Intents.default()
+load_dotenv()
+
+api_key = os.getenv("API_KEY")
+
+intents = discord.Intents.all()
 intents.message_content = True
 
 client = discord.Client(intents=intents)
@@ -17,4 +23,4 @@ async def on_message(message):
     if message.content.startswith('$hello'):
         await message.channel.send('Hello!')
 
-client.run('your token here')
+client.run(api_key)
