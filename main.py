@@ -20,7 +20,11 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('$hello'):
-        await message.channel.send('Hello!')
+    if message.content.startswith('$help'):
+        await message.channel.send('Hi! This is a placeholder message for now. Future planned commands planned include: ' \
+        '- VC compatibility (music bot if possible)' \
+        '- Moderation capabilities')
+
+
 
 client.run(api_key)
