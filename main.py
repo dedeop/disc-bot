@@ -21,8 +21,8 @@ async def on_message(message):
         return
 
     if message.content.startswith('$help'):
-        await message.channel.send('Hi! This is a placeholder message for now. Future planned commands planned include: ' \
-        '- VC compatibility (music bot if possible)' \
+        await message.channel.send('Hi! This is a placeholder message for now. Future planned commands planned include: \n' \
+        '- VC compatibility (music bot if possible) \n' \
         '- Moderation capabilities')
 
 
